@@ -19,3 +19,7 @@ api.add_resource(GetApiKeyByAlias, '/aut/getapibyalias/<alias>')
 
 # api.add_resource(Logout, '/aut/logout')
 # api.add_resource(Test, '/aut/test')
+
+@app.route("/", methods = ['POST', 'GET'])
+def hello():
+    return "Pagina de prueba"
