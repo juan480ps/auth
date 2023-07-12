@@ -60,12 +60,12 @@ class Login(Resource):
                 password = base64.b64encode(password.encode("utf-8")).decode("utf-8")                
                 cursor = connpost.cursor()                
                 query = f"""SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
-                            FROM usuario u 
-                            join "password" p on u.id = p.usuario_id
-                            join usu_x_rol uxr on u.id = uxr.usuario_id 
-                            join rol r on uxr.rol_id = r.id
-                            join usu_x_contexto uxc on u.id = uxc.usuario_id 
-                            join contexto c on uxc.contexto_id = c.id
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
                             where u.estado = 'ACT'
                             and u.nombre = '{username}'
                             and p.passwd = '{password}'
@@ -98,6 +98,7 @@ class Login(Resource):
         if access_token:
             respuesta = make_response(respuesta)
             respuesta.set_cookie('cookie', access_token, max_age = vencimiento_token)
+        connpost.commit()
         return respuesta
         
 class GetApiKeyByAlias(Resource):
@@ -127,4 +128,5 @@ class GetApiKeyByAlias(Resource):
             descripcion = str(e)
             codigo = -1000
         respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }    
+        connpost.commit()
         return respuesta
