@@ -23,16 +23,25 @@ class APIKeyManager:
 def require_api_key(func):
     @wraps(func)
     def decorated_function(*args, **kwargs):
-        data = request.get_json()
-        params = data['params']
-        api_key = params['apikey']
-        if not api_key or not APIKeyManager.validate_api_key(api_key):
-            descripcion = 'No autenticado'
-            codigo = -1003
-            objetoJson = []
-            arrayJson = []            
-            respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson' : arrayJson}
-            return respuesta                    
+        try:
+            data = request.get_json()
+            params = data['params']
+            api_key = params['apikey']
+            if not api_key or not APIKeyManager.validate_api_key(api_key):
+                descripcion = 'No autenticado'
+                codigo = -1003
+                objetoJson = []
+                arrayJson = []            
+                respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson' : arrayJson}
+                return respuesta
+        except KeyError as e :
+            descripcion = 'No se encuentra el parametro: ' + str(e)
+            codigo = -1001
+            return {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': [], 'arrayJson' : {}}
+        except Exception as e:
+            descripcion = str(e)
+            codigo = -1000
+            return {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': [], 'arrayJson' : {}}
         return func(*args, **kwargs)
     return decorated_function
 
