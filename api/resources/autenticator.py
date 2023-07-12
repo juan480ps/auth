@@ -107,7 +107,7 @@ class GetApiKeyByAlias(Resource):
         global objetoJson, arrayJson
         try:
             cursor = connpost.cursor()
-            query = f"SELECT api_key FROM pool_access WHERE alias = '{alias}' "
+            query = f"SELECT api_key FROM testdta.pool_access WHERE alias = '{alias}' "
             cursor.execute(query)
             data = cursor.fetchone()
             cursor.close()
