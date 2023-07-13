@@ -1,4 +1,4 @@
-import base64, psycopg2, api, random, string
+import base64, psycopg2, api, random, string, logging, json
 from flask_restful import Resource
 from flask import request, make_response
 from db.db_config_pstgr import postgresqlConfig
@@ -24,6 +24,7 @@ def require_api_key(func):
     @wraps(func)
     def decorated_function(*args, **kwargs):
         try:
+            logging.debug("Verificar Api-Key Auth")
             data = request.get_json()
             params = data['params']
             api_key = params['apikey']
@@ -48,15 +49,19 @@ def require_api_key(func):
 class Login(Resource):
     @require_api_key
     def post(self):
+        logging.debug("Entro POST Auth")
         global vencimiento_token, access_token, objetoJson, arrayJson
         try:
-            data = request.get_json()            
+            logging.debug("HTTP REQUEST HEADERS: " + str(request.headers))
+            logging.debug("HTTP REQUEST DATA: " + str(request.data))
+            data = request.get_json()
+            logging.info('@REQUEST POST ' + json.dumps(data))            
             operation = data['operation']
             params = data['params']            
             username = params['username']
             password = params['password']
             contexto = params['authcontext']            
-            if operation == "get_token":            
+            if operation == "get_token":         
                 password = base64.b64encode(password.encode("utf-8")).decode("utf-8")                
                 cursor = connpost.cursor()                
                 query = f"""SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
@@ -70,7 +75,8 @@ class Login(Resource):
                             and u.nombre = '{username}'
                             and p.passwd = '{password}'
                             and c.nombre = '{contexto}';
-                            """                            
+                            """
+                logging.debug(str(query))  
                 cursor.execute(query)
                 data = cursor.fetchone()
                 cursor.close()                
@@ -89,9 +95,13 @@ class Login(Resource):
                 descripcion = 'Operación inválida'
                 codigo = -1002
         except KeyError as e :
+            logging.debug(e)
+            logging.info("Peticion finalizada con error", exc_info = True)
             descripcion = 'No se encuentra el parametro: ' + str(e)
             codigo = -1001
         except Exception as e:
+            logging.debug(e)
+            logging.info("Peticion finalizada con error", exc_info = True)
             descripcion = str(e)
             codigo = -1000
         respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }
@@ -99,6 +109,7 @@ class Login(Resource):
             respuesta = make_response(respuesta)
             respuesta.set_cookie('cookie', access_token, max_age = vencimiento_token)
         connpost.commit()
+        logging.info('@REQUEST GET ' + request.full_path + ' @RESPONSE ' + json.dumps(respuesta))
         return respuesta
         
 class GetApiKeyByAlias(Resource):
