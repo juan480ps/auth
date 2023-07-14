@@ -5,10 +5,12 @@ from db.db_config_pstgr import postgresqlConfig
 from functools import wraps
 
 connpost = psycopg2.connect(postgresqlConfig)
-vencimiento_token = 30
+vencimiento_token = 180#30
 access_token = ""
 objetoJson = []
 arrayJson = []
+
+logging.basicConfig(filename='demo.log', level=logging.DEBUG)
 
 def generate_token():
     characters = string.ascii_letters + string.digits
@@ -104,12 +106,12 @@ class Login(Resource):
             logging.info("Peticion finalizada con error", exc_info = True)
             descripcion = str(e)
             codigo = -1000
-        respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }
+        respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }        
+        logging.info('@REQUEST GET ' + request.full_path + ' @RESPONSE ' + json.dumps(respuesta))
         if access_token:
             respuesta = make_response(respuesta)
             respuesta.set_cookie('cookie', access_token, max_age = vencimiento_token)
         connpost.commit()
-        logging.info('@REQUEST GET ' + request.full_path + ' @RESPONSE ' + json.dumps(respuesta))
         return respuesta
         
 class GetApiKeyByAlias(Resource):

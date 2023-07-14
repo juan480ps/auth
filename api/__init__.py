@@ -8,14 +8,16 @@ dictConfig({
     'formatters': {'default': {
         'format': 'auth %(levelname)s %(filename)s(%(lineno)d) %(funcName)s(): %(message)s',
     }},
-    'handlers': {'wsgi': {
-        'class': 'logging.StreamHandler',
-        'stream': 'ext://flask.logging.wsgi_errors_stream',
-        'formatter': 'default'
-    }},
+    'handlers': {
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'file.log',  # Reemplaza con la ruta y nombre de archivo deseado
+            'formatter': 'default'
+        }
+    },
     'root': {
         'level': 'DEBUG',
-        'handlers': ['wsgi']
+        'handlers': ['file']
     }
 })
 

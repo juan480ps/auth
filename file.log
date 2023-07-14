@@ -1,0 +1,1313 @@
+auth INFO _internal.py(187) _log(): [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+auth INFO _internal.py(187) _log(): [33mPress CTRL+C to quit[0m
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "RisWuiHV99GCSR87cW11LZQqkLHxKRhIN80G78cDQWOgbkIQKv5MXaxBWKkfydHPP98rUJTmdrNoFOCK"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:16:47] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "eRq64sWuYbj9huaErb8E3oWo5tpAqq1LC3p31nI0cWpYiOYiUqE0LiDBkdUqlare0qnimwNGJzoLYfwY"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:17:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "Vwzw0aItog8d20WKIc4dPhcKkSdcx21DLjJTxOp2rekrMNc4dAoqG1awfZDKJ067dVRlzYh7JNJP5E8I"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:20:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "OAnRHDoFZ3G0BLOrcNzXb988jhfxDkzI3mj9eeIFSwRnCnRgIzK3cTT9zqmfiZ7XfvuSwkemGIxYHD1p"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:23:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "VHr74gW1ypORumK5mxbKAl7A9kUCQKj6X5fgvFLrZ0K9t9XwGSid8Mq5CrDRX4EEyqstdcc6ncRdDWYk"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:24:04] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "i5A7LpRamJKBPMU7Fqog2VBlDpAvSTu5B59vJyMoJFzwWmt7bcIQNDCcC1lXNrSZQS5sLvkzM5gzAihy"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:26:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "JCrbwAXXwXDz7N34s674wvaqKjMSbyDts2gFHTsqDMQAPGIDHZTiLfn3pwNVz2TWQNXqgCnbCOy1B8qC"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:29:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "O65NVMB66dQgjoftkW7X8omBfn8V6xHenik87OLYnLiWJJkiJVUM7LyuSAwETkWiq9T6XLF2pq4efxPT"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:32:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "q0bX4iNSeMC8cEyP6sa4lX5BZigQX0oAsrwouVK2EdP2Ev3P1JaNeAZyZYofJUNF4RV4TLBgFceCoOy7"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:35:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "yjUTdvhXbTmy9TlnDXZfcSqHNq9TMzF2iiUz3B18IYbWyxWS4pLrD81tYzKa1O8gumQxWEK40VL0W6Xl"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:38:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "Iu8G2sBIqs85KqED31s8B2FdBLnfYX3NJDwlZMgFZsDlh6q3J1eDyEx1hWFf0S7T02CAMfbqwG4BtwEu"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:41:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "peIinLisMkk59gZfXTJbylGjPnY0PtET60VmGuNk0lBTPJTBk9sILDSsJqHJsiJoZaCWqujmuGKhPoVJ"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:44:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "cOoEn3HlNEOct66740oFwohbhiotf4QUFEzgR5RZenzgUnTWUbpLP4dRU3BgHReLGunnr469adBliHGB"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:47:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "xvlKyXlUXseIMmSxf5bFWWCuNQyA7Oeh5wTvc00kT8mJqEJscumxdzIj1b2PxvgVVLG5olxOdgyLyE2v"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:50:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "SL73zSpL5DuhbFnxjgaMVrBOhIrbXpn8un9QeRwSQhbyeNxnqdS9FGmmZrc0IyTl0HhOw3Ac5h708mDB"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:53:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "YCyN9sRjaBAdIk9sli29wvRmsf8CInUOJpTYYS1h6hobEsFsBLNMsB1ciZaEjNTtt02Cu6YsH2EveDCQ"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 12:56:02] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "JCmw6y5uNuWfns1rZUa9sGsRAYZ8jUDTPzwH7JTSLwTPRUKoKwCEdfNOywqsj4oNdF67QGhVz2hipG9e"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:00:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "57hXjwQxLPdNvAsL0V0W4s7u2fn8JpdKqjiyOjD81yLgtub2zenv6DCxwXlE45PnUSDjb9fbOVJgdGyj"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:03:02] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "afQlwMu42y6pn4y03vfJCSPezOfCzJQyjeo7wnE4wOleVbyGxkiPsAM5zzby2KFyp6l6ubuTXECjoNBX"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:07:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "QDGdHtCSdDUdtex5DddhFnmlJPEDvPgSqZd81L7DWgmhD2mA7sfm99eoTDqk3ETILShnU4ncHh8ZYvsN"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:10:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "W0sSi4Ga59GIJfbkcOVQsoeUeW7idYmwgVJBSsJwxV3ldZqvk24mRqsxgy6RXCu1Ze1jQcGAxI4WLAek"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:13:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "xesE9uCAngYgcoQUy3pTzthlnkFnbKDCEIBVE8AFQh1hKTM0QPmdjVsu3hWhtb0iTGDOt39Yrg830yuG"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:16:02] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "todZpPa2WhoLuLJDMSbict8gxzzFk4SU12AEvd91h76oihljxRIeZGaBryVwHL5Dxi3ogtFkxThl8xOH"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:20:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "CtIYXmIKNdudqdp63PGAmE2TQKpTzSg15jJcNtlz0grkbqgIGJMJiXyyA8QRrF6SgrQAZX8zZGgM603l"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:23:02] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "GKkku4ddJnYliWQV6OrbttAlmR2RV393ZyNnAK4XB82Ue2C6ojpeXV4WVmaxaQjxQux3GSMqiBDrPTwH"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:27:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "Pstu8gKRwvPfeP9lopkfiEJldIk7Agg4UO7OHXVDi6d0Gza3ABnKsWmMq1KHJEt5KvPijkpBiJ0CxAuA"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:30:02] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "DMVPyPauq7QTzZ5eORcQlZqjclhQzfkDXmmWFhD7gTPgTc5CLWODW3wgfkuyWHN9SvEcHHo12eG3QSfY"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:34:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "6ZLATt7yH7mGeHXY8z4bm1GBEYZZtb20TCZigECDx1J5tHUZmQ9vWkCaOmLJYsZRb5N3iAmqQfaVJifl"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:35:29] "POST /aut/login HTTP/1.1" 200 -
+auth INFO _internal.py(187) _log(): [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+auth INFO _internal.py(187) _log(): [33mPress CTRL+C to quit[0m
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "TTuSo8JUhnKmotqHESe1HaL6UJuWXyLjgVFdwaOw8CvbkJAuUbDDwNoVCJvs7B4OsNZPs1NHumWTaWGy"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:51:01] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "0yzyMsiuKv7X9yF47NcJpwDk86NuojqLP0m1P4L1nyvaLbaoOA32acGEFUQYo5E2YwFptD0OkKEzn7yM"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:54:39] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "lCUnqQ829nfbn7jyMgeQY0usGfUVsBe7Z6BMMdqP1EzBkGC10QoW3FkdwJn0EohgLMrX5NwQiYbCBFH2"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:58:27] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "WH2BU2VNs24XNg5jJgS3qrbjjYJUWpbcfN7TSEBSeBpzMZb8YuDqOUzQe6llt6nqrOdRH7PojghG5geB"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:58:43] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "By6VqAcO8LvgPD1XbhDYNq7byBfYZwux8LmXA3EiAyJytdEkeV928gSPL8fmZ2OjpsCxbYezkBQid1C2"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:59:20] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:59:27] "POST /aut/getapibyalias/testdta HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "BUb9Myc3KcDmn6EyHluWwRWR4xfaS1gNOp9z1fg8fpzxMboxqM5fhvFFxfmMo1JSvlsgxfHWB2GIAJKf"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:59:34] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "8Cnf3vMpHk1RVMhNXu6JPJR2DBzQLhden0GhtFvDH26Y1QruYf6HkltuJKGbt2blIpthCOJ2hpgYFSdl"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 13:59:50] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 14:01:44] "POST /aut/getapibyalias/testdta HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "U7mqjRU2OsdJ0wWjQY8iank8g47uN5WtNnXyVSDeKRGbFj1hx1dw7HEpqtGcEpfcxP9wK9u9gPCNKlng"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 14:02:17] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "KaLECy0mdGt4dduTYHm4579YCvzWpUm4eIxlJKYSyNxNOtXAOQNH8zte6GbbASQ6roXy3YALErWFXa4Q"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 14:02:24] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [13/Jul/2023 14:02:37] "POST /aut/getapibyalias/testdta HTTP/1.1" 200 -
+auth INFO _internal.py(187) _log(): [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+auth INFO _internal.py(187) _log(): [33mPress CTRL+C to quit[0m
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 164
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTR';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": -1003, "descripcion": "Usuario no autenticado", "objetoJson": [], "arrayJson": []}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:27:29] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 164
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTR';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": -1003, "descripcion": "Usuario no autenticado", "objetoJson": [], "arrayJson": []}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:28:15] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 164
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTR';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": -1003, "descripcion": "Usuario no autenticado", "objetoJson": [], "arrayJson": []}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:36:44] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 164
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTR';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": -1003, "descripcion": "Usuario no autenticado", "objetoJson": [], "arrayJson": []}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:36:47] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 164
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTR';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": -1003, "descripcion": "Usuario no autenticado", "objetoJson": [], "arrayJson": []}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:37:14] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 164
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTR"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTR';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": -1003, "descripcion": "Usuario no autenticado", "objetoJson": [], "arrayJson": []}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:37:15] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": -1003, "descripcion": "Usuario no autenticado", "objetoJson": [], "arrayJson": []}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:37:31] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": -1003, "descripcion": "Usuario no autenticado", "objetoJson": [], "arrayJson": []}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:37:32] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 165
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_CONTRI"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_CONTRI';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "Wwdmf6EWvXqYXrrVvcE4Qok8bUaG9EDKoTRoJZZHNO7txvOXa3gP5mq9jqstPhez62Yj1PRQLoYFB74j"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:37:48] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 163
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_KUDE';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "8hCddibN3UUubxk4qYBsWB4Fh9JbStycaN5s6BLU9IEDTSVLhrYWa1xQuxGkfh6nMkwRt5jvMpp7PF3p"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:38:20] "POST /aut/login HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:38:26] "POST /aut/getapibyalias/testdta HTTP/1.1" 200 -
+auth DEBUG autenticator.py(29) decorated_function(): Verificar Api-Key Auth
+auth DEBUG autenticator.py(54) post(): Entro POST Auth
+auth DEBUG autenticator.py(57) post(): HTTP REQUEST HEADERS: Host: localhost:5001
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 163
+Content-Type: application/json
+
+
+auth DEBUG autenticator.py(58) post(): HTTP REQUEST DATA: b'{"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}'
+auth INFO autenticator.py(60) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+auth DEBUG autenticator.py(81) post(): SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
+                            FROM testdta.usuario u 
+                            join testdta."password" p on u.id = p.usuario_id
+                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join testdta.rol r on uxr.rol_id = r.id
+                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join testdta.contexto c on uxc.contexto_id = c.id
+                            where u.estado = 'ACT'
+                            and u.nombre = 'jcorrea'
+                            and p.passwd = 'MTIzNDU2Nzhq'
+                            and c.nombre = 'APP_KUDE';
+                            
+auth INFO autenticator.py(110) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": [], "arrayJson": [{"token": "910Lez3xoDKHpnib1qM9pUAsDObv9EAr5TC2WciDOOXpqePQKQdKHvKaGmLNYHQ5SFrMgyOxE5gPlCuj"}]}
+auth INFO _internal.py(187) _log(): 127.0.0.1 - - [14/Jul/2023 09:39:43] "POST /aut/login HTTP/1.1" 200 -
