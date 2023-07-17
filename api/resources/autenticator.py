@@ -18,7 +18,7 @@ def generate_token():
 class APIKeyManager:
     @staticmethod
     def validate_api_key(api_key):
-        return api_key == api.api_key
+        return api_key == api.API_KEY
 
 def require_api_key(func):
     @wraps(func)
@@ -65,12 +65,12 @@ class Login(Resource):
                 password = base64.b64encode(password.encode("utf-8")).decode("utf-8")                
                 cursor = connpost.cursor()                
                 query = f"""SELECT u.nombre username, p.passwd, u.estado est_usuario, r.nombre rol, c.nombre contexto
-                            FROM testdta.usuario u 
-                            join testdta."password" p on u.id = p.usuario_id
-                            join testdta.usu_x_rol uxr on u.id = uxr.usuario_id 
-                            join testdta.rol r on uxr.rol_id = r.id
-                            join testdta.usu_x_contexto uxc on u.id = uxc.usuario_id 
-                            join testdta.contexto c on uxc.contexto_id = c.id
+                            FROM {api.AMBIENTE_DB}.usuario u 
+                            join {api.AMBIENTE_DB}."password" p on u.id = p.usuario_id
+                            join {api.AMBIENTE_DB}.usu_x_rol uxr on u.id = uxr.usuario_id 
+                            join {api.AMBIENTE_DB}.rol r on uxr.rol_id = r.id
+                            join {api.AMBIENTE_DB}.usu_x_contexto uxc on u.id = uxc.usuario_id 
+                            join {api.AMBIENTE_DB}.contexto c on uxc.contexto_id = c.id
                             where u.estado = 'ACT'
                             and u.nombre = '{username}'
                             and p.passwd = '{password}'
@@ -118,7 +118,7 @@ class GetApiKeyByAlias(Resource):
         global objetoJson, arrayJson
         try:
             cursor = connpost.cursor()
-            query = f"SELECT api_key FROM testdta.pool_access WHERE alias = '{alias}' "
+            query = f"SELECT api_key FROM {api.AMBIENTE_DB}.pool_access WHERE alias = '{alias}' "
             cursor.execute(query)
             data = cursor.fetchone()
             cursor.close()
