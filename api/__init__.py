@@ -1,43 +1,21 @@
+import logging.config, yaml
 from flask import Flask
-from flask_jwt_extended import JWTManager
 from flask_restful import Api
-from logging.config import dictConfig
 
-dictConfig({
-    'version': 1,
-    'formatters': {'default': {
-        'format': 'auth %(levelname)s %(filename)s(%(lineno)d) %(funcName)s(): %(message)s',
-    }},
-    'handlers': {
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': 'file.log',  # Reemplaza con la ruta y nombre de archivo deseado
-            'formatter': 'default'
-        }
-    },
-    'root': {
-        'level': 'DEBUG',
-        'handlers': ['file']
-    }
-})
+file = open('config/log/logging.yml', 'r')
+data = yaml.safe_load(file)
+file.close()
+logging.config.dictConfig(data)
 
 app = Flask(__name__)
-
 app.config.from_pyfile('config.py')
-
 api_key = app.config.get('API_KEY')
-
 api = Api(app)
 
-jwt = JWTManager(app)
-
-from api.resources.autenticator import Login, GetApiKeyByAlias #Logout, Test, 
+from api.resources.autenticator import Login, GetApiKeyByAlias
 
 api.add_resource(Login, '/aut/login')
 api.add_resource(GetApiKeyByAlias, '/aut/getapibyalias/<alias>')
-
-# api.add_resource(Logout, '/aut/logout')
-# api.add_resource(Test, '/aut/test')
 
 @app.route("/", methods = ['POST', 'GET'])
 def hello():

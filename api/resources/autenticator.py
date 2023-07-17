@@ -1,16 +1,14 @@
 import base64, psycopg2, api, random, string, logging, json
 from flask_restful import Resource
 from flask import request, make_response
-from db.db_config_pstgr import postgresqlConfig
+from config.db.db_config_pstgr import postgresqlConfig
 from functools import wraps
 
 connpost = psycopg2.connect(postgresqlConfig)
-vencimiento_token = 180#30
+vencimiento_token = 30#30
 access_token = ""
-objetoJson = []
+objetoJson = {}
 arrayJson = []
-
-logging.basicConfig(filename='demo.log', level=logging.DEBUG)
 
 def generate_token():
     characters = string.ascii_letters + string.digits

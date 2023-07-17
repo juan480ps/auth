@@ -1,0 +1,12 @@
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+[33mPress CTRL+C to quit[0m
+@REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+@REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": {}, "arrayJson": [{"token": "w44MHxsUZ48FLmTxIIKq9JGWcgRSF317PLLywwOxdtBmJykwxnYPdrYXaN3L0OmAvPaEIs0SUcyoiVtf"}]}
+127.0.0.1 - - [17/Jul/2023 11:13:14] "POST /aut/login HTTP/1.1" 200 -
+@REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+@REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": {}, "arrayJson": [{"token": "Rgv4l3OXb7YlJKuhlmu6rAeW37xBAxNTuzvvnlpXuTZG6DByVuoaxtF9S9MRUhGqnKPUptI4f6bFpHAp"}]}
+127.0.0.1 - - [17/Jul/2023 11:14:14] "POST /aut/login HTTP/1.1" 200 -
+@REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+@REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": {}, "arrayJson": [{"token": "pgpXvuq2qcR3JoLRU8BTs3iGN6qtzxzFgm5aSHi0ERXe3xzbc2Seauzkz1ZaK3cApkLoTPoei9SkytLI"}]}
+127.0.0.1 - - [17/Jul/2023 11:15:19] "POST /aut/login HTTP/1.1" 200 -
