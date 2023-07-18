@@ -96,12 +96,12 @@ class Login(Resource):
                 codigo = -1002
         except KeyError as e :
             logging.debug(e)
-            logging.info("Peticion finalizada con error", exc_info = True)
+            logging.error("Peticion finalizada con error", exc_info = True)
             descripcion = 'No se encuentra el parametro: ' + str(e)
             codigo = -1001
         except Exception as e:
             logging.debug(e)
-            logging.info("Peticion finalizada con error", exc_info = True)
+            logging.error("Peticion finalizada con error", exc_info = True)
             descripcion = str(e)
             codigo = -1000
         respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }        
