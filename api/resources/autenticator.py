@@ -125,12 +125,15 @@ class GetApiKeyByAlias(Resource):
             if data:            
                 api_key_pool = data[0]
                 
-            listJson = {
-                'apikey' : api_key_pool
-            }  
-            descripcion = 'OK'
-            codigo = 1000
-            arrayJson = [listJson]  
+                listJson = {
+                    'apikey' : api_key_pool
+                }  
+                descripcion = 'OK'
+                codigo = 1000
+                arrayJson = [listJson]
+            else:
+                descripcion = 'API-Key no encontrado'
+                codigo = -1001
             
         except KeyError as e :
             descripcion = 'No se encuentra el parametro: ' + str(e)
