@@ -24,7 +24,7 @@ def require_api_key(func):
     @wraps(func)
     def decorated_function(*args, **kwargs):
         try:
-            logging.debug("Verificar Api-Key Auth")
+            logging.info("Verificar Api-Key Auth")
             data = request.get_json()
             params = data['params']
             api_key = params['apikey']
@@ -34,14 +34,20 @@ def require_api_key(func):
                 objetoJson = []
                 arrayJson = []            
                 respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson' : arrayJson}
+                logging.debug(descripcion)
+                logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
                 return respuesta
         except KeyError as e :
             descripcion = 'No se encuentra el parametro: ' + str(e)
             codigo = -1001
+            logging.debug(str(e))
+            logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
             return {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': [], 'arrayJson' : {}}
         except Exception as e:
             descripcion = str(e)
             codigo = -1000
+            logging.debug(str(e))
+            logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
             return {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': [], 'arrayJson' : {}}
         return func(*args, **kwargs)
     return decorated_function
@@ -49,8 +55,8 @@ def require_api_key(func):
 class Login(Resource):
     @require_api_key
     def post(self):
-        logging.debug("Entro POST Auth")
         global vencimiento_token, access_token, objetoJson, arrayJson
+        logging.debug("Entro POST Auth")
         try:
             logging.debug("HTTP REQUEST HEADERS: " + str(request.headers))
             logging.debug("HTTP REQUEST DATA: " + str(request.data))
@@ -91,19 +97,23 @@ class Login(Resource):
                 else:
                     descripcion = 'Usuario no autenticado'
                     codigo = -1003
+                    logging.debug(descripcion)
+                    logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
             else:
                 descripcion = 'Operación inválida'
                 codigo = -1002
+                logging.debug(descripcion)
+                logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
         except KeyError as e :
-            logging.debug(e)
-            logging.error("Peticion finalizada con error", exc_info = True)
             descripcion = 'No se encuentra el parametro: ' + str(e)
             codigo = -1001
-        except Exception as e:
             logging.debug(e)
-            logging.error("Peticion finalizada con error", exc_info = True)
+            logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
+        except Exception as e:
             descripcion = str(e)
             codigo = -1000
+            logging.debug(e)
+            logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
         respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }        
         logging.info('@REQUEST GET ' + request.full_path + ' @RESPONSE ' + json.dumps(respuesta))
         if access_token:
@@ -135,17 +145,19 @@ class GetApiKeyByAlias(Resource):
             else:
                 descripcion = 'API-Key no encontrado'
                 codigo = -1001
+                logging.debug(descripcion)
+                logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
             
         except KeyError as e :
-            logging.debug(e)
-            logging.error("Peticion finalizada con error", exc_info = True)
             descripcion = 'No se encuentra el parametro: ' + str(e)
             codigo = -1001
-        except Exception as e:
             logging.debug(e)
-            logging.error("Peticion finalizada con error", exc_info = True)
+            logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
+        except Exception as e:
             descripcion = str(e)
             codigo = -1000
+            logging.debug(e)
+            logging.error("Peticion finalizada con error; " + descripcion + " " + str(codigo), exc_info=True)
         respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }       
         logging.info('@REQUEST GET ' + request.full_path + ' @RESPONSE ' + json.dumps(respuesta)) 
         connpost.commit()
