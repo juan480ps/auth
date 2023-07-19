@@ -117,6 +117,7 @@ class GetApiKeyByAlias(Resource):
     def post(self, alias):
         global objetoJson, arrayJson
         try:
+            logging.info('@REQUEST POST GetApiKeyByAlias')
             cursor = connpost.cursor()
             query = f"SELECT api_key FROM {api.AMBIENTE_DB}.pool_access WHERE alias = '{alias}' "
             cursor.execute(query)
@@ -136,11 +137,16 @@ class GetApiKeyByAlias(Resource):
                 codigo = -1001
             
         except KeyError as e :
+            logging.debug(e)
+            logging.error("Peticion finalizada con error", exc_info = True)
             descripcion = 'No se encuentra el parametro: ' + str(e)
             codigo = -1001
         except Exception as e:
+            logging.debug(e)
+            logging.error("Peticion finalizada con error", exc_info = True)
             descripcion = str(e)
             codigo = -1000
-        respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }    
+        respuesta = {'codigo': codigo, 'descripcion': descripcion, 'objetoJson': objetoJson, 'arrayJson': arrayJson }       
+        logging.info('@REQUEST GET ' + request.full_path + ' @RESPONSE ' + json.dumps(respuesta)) 
         connpost.commit()
         return respuesta
