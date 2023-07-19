@@ -1,0 +1,18 @@
+auth INFO 2023-07-19 13:25:30,313 root autenticator.py(27) decorated_function(): Verificar Api-Key Auth
+auth INFO 2023-07-19 13:25:30,313 root autenticator.py(64) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+auth INFO 2023-07-19 13:25:30,316 root autenticator.py(118) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": {}, "arrayJson": [{"token": "EatokiyX7TnrZgszbhaNSv3VibrDcWaYjKm3XSF0erSfpRM7TMm3zMr2oCsayzJmBSYmvbQOWwF0qbb2"}]}
+auth INFO 2023-07-19 13:26:21,819 root autenticator.py(27) decorated_function(): Verificar Api-Key Auth
+auth INFO 2023-07-19 13:26:21,820 root autenticator.py(64) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+auth INFO 2023-07-19 13:26:21,823 root autenticator.py(118) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": {}, "arrayJson": [{"token": "WUGlRtYXHb0nh5DnAXa1OzRGaR9d9mY4YevP6MBQH8vUxKXwviNDvU0tOXuVprWFB3LPEGjEBlMLZhlv"}]}
+auth INFO 2023-07-19 13:27:05,942 root autenticator.py(27) decorated_function(): Verificar Api-Key Auth
+auth INFO 2023-07-19 13:27:05,942 root autenticator.py(64) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+auth INFO 2023-07-19 13:27:05,943 root autenticator.py(118) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": {}, "arrayJson": [{"token": "M4b5dkzzpO8pHEk7qcyMUKhzypwsqfnLpzYHgfJoEOQitBgRy7YzSViCNSikm9PEcDBEpuoUUDLgTguf"}]}
+auth INFO 2023-07-19 13:27:35,371 root autenticator.py(27) decorated_function(): Verificar Api-Key Auth
+auth INFO 2023-07-19 13:27:35,371 root autenticator.py(130) post(): @REQUEST POST GetApiKeyByAlias
+auth INFO 2023-07-19 13:27:35,372 root autenticator.py(162) post(): @REQUEST GET /aut/getapibyalias/testdta? @RESPONSE {"codigo": 1000, "descripcion": "OK", "objetoJson": {}, "arrayJson": [{"apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66"}]}
+auth INFO 2023-07-19 13:29:03,997 root autenticator.py(27) decorated_function(): Verificar Api-Key Auth
+auth INFO 2023-07-19 13:29:03,997 root autenticator.py(64) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+auth INFO 2023-07-19 13:29:03,998 root autenticator.py(118) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": {}, "arrayJson": [{"token": "vQw0TbWY5lie1p9cDKRqfjKhppt5ybF1ItAlGmVSy0EYXvobXth6TiKihWksaUPyPK6wnSMtncGsEImq"}]}
+auth INFO 2023-07-19 13:32:23,045 root autenticator.py(27) decorated_function(): Verificar Api-Key Auth
+auth INFO 2023-07-19 13:32:23,045 root autenticator.py(64) post(): @REQUEST POST {"operation": "get_token", "params": {"username": "jcorrea", "password": "12345678j", "apikey": "0c3ac2fa-f79a-4503-a0ea-f950dd0a5b66", "authcontext": "APP_KUDE"}}
+auth INFO 2023-07-19 13:32:23,046 root autenticator.py(118) post(): @REQUEST GET /aut/login? @RESPONSE {"codigo": 1000, "descripcion": "Sesion iniciada con exito", "objetoJson": {}, "arrayJson": [{"token": "LEEiKwcTifOsIbiqEehTsIm9lBnua8ou6cNoZph9r7jR3hTlLErJ5I1jLEItCxxzeKGY0dnZr7MlmomD"}]}
